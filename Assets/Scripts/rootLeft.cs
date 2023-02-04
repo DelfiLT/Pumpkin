@@ -22,10 +22,16 @@ public class rootLeft : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        Transform parent = GetComponentInParent<Transform>();
-        GameObject root = Instantiate(roots[0], new Vector3(leftEnd.position.x, leftEnd.position.y, leftEnd.position.z), Quaternion.identity, parent);
-        rightSide.SetActive(false);
-        Destroy(this);
+        rootParent rootPaternScript = GetComponentInParent<rootParent>();
+        if(rootPaternScript.rootLevel < 5)
+        {
+            Transform parent = GetComponentInParent<Transform>();
+            GameObject root = Instantiate(roots[0], new Vector3(leftEnd.position.x, leftEnd.position.y, leftEnd.position.z), Quaternion.identity, parent);
+            rightSide.SetActive(false);
+            rootPaternScript.rootLevel += 1;
+            Destroy(this);
+        }
+
     }
 
 }

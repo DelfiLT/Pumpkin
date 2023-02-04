@@ -7,8 +7,11 @@ public class playerControll : MonoBehaviour
 
     public float velocityMovement;
 
+    public GameObject rootPatern;
     public GameObject world;
     public GameObject[] roots;
+    public GameObject camera1;
+    public GameObject camera2;
 
     public bool onTriggerLeft = false;
     public bool onTriggerRight = false;
@@ -19,7 +22,8 @@ public class playerControll : MonoBehaviour
 
     void Start()
     {
-       
+        camera1.SetActive(true);
+        camera2.SetActive(false);
     }
 
  
@@ -50,7 +54,20 @@ public class playerControll : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && !placeRoot)
         {
-            Instantiate(roots[0], new Vector3(transform.position.x, transform.position.y -0.3f, transform.position.z -3), Quaternion.identity, world.transform);            
+            GameObject rootFather = Instantiate(rootPatern, new Vector3(transform.position.x, transform.position.y , transform.position.z - 3), Quaternion.identity, world.transform);
+            Instantiate(roots[0], new Vector3(rootFather.transform.position.x, rootFather.transform.position.y - 0.4f, rootFather.transform.position.z - 3), Quaternion.identity, rootFather.transform);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            camera1.SetActive(true);
+            camera2.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            camera2.SetActive(true);
+            camera1.SetActive(false);
         }
     }
 
