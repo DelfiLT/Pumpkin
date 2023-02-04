@@ -183,6 +183,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roots:
   - {fileID: 3208266948818308035}
+  - {fileID: 7789484409728461091, guid: 9522fa6b64fa3964bb9a1f48dc45120b, type: 3}
+  - {fileID: 7349929075913524455, guid: 882a510a27aad554fb07a849f223d849, type: 3}
   leftEnd: {fileID: 2056390637477268380}
   rightSide: {fileID: 9209560370004845183}
 --- !u!70 &7866210767753417766
@@ -295,5 +297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roots:
   - {fileID: 3208266948818308035}
+  - {fileID: 3549368836693121792, guid: ce4ed45103ad2e840a7546f9ee181c3d, type: 3}
+  - {fileID: 7349929075913524455, guid: 882a510a27aad554fb07a849f223d849, type: 3}
   rightEnd: {fileID: 1264649271444205302}
   leftSide: {fileID: 3208266949893658355}

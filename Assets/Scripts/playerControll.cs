@@ -20,25 +20,30 @@ public class playerControll : MonoBehaviour
     public int[] seeds;
     public int seedCant = 3;
 
+    Animator animator;
+
     void Start()
     {
+        animator = GetComponent<Animator>();
         camera1.SetActive(true);
         camera2.SetActive(false);
     }
 
  
-    void Update() {
-
+    void Update() 
+    {
         float movementX = Input.GetAxis("Horizontal") * velocityMovement;
 
         movementX *= Time.deltaTime;
 
         if(movementX > 0 && !onTriggerRight)
         {
+            animator.SetBool("moveRight", true);
             transform.Translate(movementX, 0, 0);
         }
         else if(movementX < 0 && !onTriggerLeft)
         {
+            animator.SetBool("moveRight", true);
             transform.Translate(movementX, 0, 0);
         }
         
@@ -52,10 +57,11 @@ public class playerControll : MonoBehaviour
             world.transform.Rotate(new Vector3(0, 0, -0.1f));
         }
 
+
         if (Input.GetKeyDown(KeyCode.E) && !placeRoot)
         {
-            GameObject rootFather = Instantiate(rootPatern, new Vector3(transform.position.x, transform.position.y , transform.position.z - 3), Quaternion.identity, world.transform);
-            Instantiate(roots[0], new Vector3(rootFather.transform.position.x, rootFather.transform.position.y - 0.4f, rootFather.transform.position.z - 3), Quaternion.identity, rootFather.transform);
+            GameObject rootFather = Instantiate(rootPatern, new Vector3(transform.position.x, transform.position.y -0.35f , transform.position.z - 3), Quaternion.identity, world.transform);
+            Instantiate(roots[0], new Vector3(rootFather.transform.position.x, rootFather.transform.position.y, rootFather.transform.position.z), Quaternion.identity, rootFather.transform);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -76,10 +82,12 @@ public class playerControll : MonoBehaviour
         if (collision.CompareTag("leftSide"))
         {
             onTriggerLeft = true;
+            transform.localEulerAngles = new Vector3(0, 0, 15);
         }
         if (collision.CompareTag("rightSide"))
         {
             onTriggerRight = true;
+            transform.localEulerAngles = new Vector3(0, 0, -15);
         }
         if (collision.CompareTag("rootMain"))
         {
@@ -92,6 +100,7 @@ public class playerControll : MonoBehaviour
         onTriggerRight = false;
         onTriggerLeft = false;
         placeRoot = false;
+        transform.localEulerAngles = new Vector3(0, 0, 0);
     }
 
     private void OnMouseDown()
