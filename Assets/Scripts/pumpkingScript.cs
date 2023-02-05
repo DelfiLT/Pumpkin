@@ -35,7 +35,10 @@ public class pumpkingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (rootLevel > 5)
+        {
+            gameManager.Instance.pumpkingCant--;
+        }
     }
     public void changeState()
     {
@@ -54,6 +57,7 @@ public class pumpkingScript : MonoBehaviour
 
     public void ChangeType(int materialType)
     {
+        gameManager.Instance.pumpkingCant--;
         switch (materialType)
         {
             case 0:
@@ -61,14 +65,23 @@ public class pumpkingScript : MonoBehaviour
                 break;
 
             case 1:
+                gameManager.Instance.seedsCant++;
+                gameManager.Instance.ironCant++;
+                gameManager.Instance.semillita.text = $"{gameManager.Instance.seedsCant}";
                 actualSprite.sprite = pumpkingSprites[materialType + 3];
                 break;
 
             case 2:
+                gameManager.Instance.seedsCant++;
+                gameManager.Instance.oilCant++;
+                gameManager.Instance.semillita.text = $"{gameManager.Instance.seedsCant}";
                 actualSprite.sprite = pumpkingSprites[materialType + 3];
                 break;
 
             case 3:
+                gameManager.Instance.seedsCant++;
+                gameManager.Instance.sandCant++;
+                gameManager.Instance.semillita.text = $"{gameManager.Instance.seedsCant}";
                 actualSprite.sprite = pumpkingSprites[materialType + 3];
                 break;
 

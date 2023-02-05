@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class gameManager : MonoBehaviour
 {
+    public int ironCant;
+    public int oilCant;
+    public int sandCant;
     public int seedsCant;
     public int waterCant;
     public int pumpkingCant;
@@ -15,9 +18,6 @@ public class gameManager : MonoBehaviour
     public TextMeshProUGUI semillita;
 
     
-
-
-
     private static gameManager _instance;
     public static gameManager Instance
     {
@@ -48,7 +48,17 @@ public class gameManager : MonoBehaviour
 
     void Update()
     {
-        
+        if (seedsCant == 0 && pumpkingCant == 0)
+        {
+            Debug.Log("LOSE");
+            //LOSE
+        }
+
+        if (ironCant > 0 && oilCant > 0 && sandCant > 0)
+        {
+            Debug.Log("WIN");
+            //WIN
+        }
     }
 
     public void spawnAwita()
