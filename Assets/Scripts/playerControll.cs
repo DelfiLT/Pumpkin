@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class playerControll : MonoBehaviour
 {
-
+    //test
     public float velocityMovement;
+    public float testeameesta;
 
     public GameObject rootPatern;
     public GameObject world;
