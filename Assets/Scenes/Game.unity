@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 45990401}
   - component: {fileID: 45990402}
   - component: {fileID: 45990403}
+  - component: {fileID: 45990404}
   m_Layer: 0
   m_Name: water (10)
   m_TagString: awita
@@ -224,6 +225,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.04
+--- !u!95 &45990404
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45990400}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 826c842d19817b843883bc02cf789a99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &68648306
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +478,7 @@ GameObject:
   - component: {fileID: 255109816}
   - component: {fileID: 255109817}
   - component: {fileID: 255109818}
+  - component: {fileID: 255109819}
   m_Layer: 0
   m_Name: water (8)
   m_TagString: awita
@@ -547,6 +569,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.04
+--- !u!95 &255109819
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255109815}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 826c842d19817b843883bc02cf789a99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &287230051
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +600,7 @@ GameObject:
   - component: {fileID: 287230052}
   - component: {fileID: 287230053}
   - component: {fileID: 287230054}
+  - component: {fileID: 287230055}
   m_Layer: 0
   m_Name: water (7)
   m_TagString: awita
@@ -648,6 +691,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.04
+--- !u!95 &287230055
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287230051}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 826c842d19817b843883bc02cf789a99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &290128182
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,7 +823,7 @@ Animator:
   m_GameObject: {fileID: 290128182}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 26ae7ef5a1c67324ba5516402d2aac00, type: 2}
+  m_Controller: {fileID: 9100000, guid: 826c842d19817b843883bc02cf789a99, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -781,6 +844,7 @@ GameObject:
   - component: {fileID: 317427961}
   - component: {fileID: 317427962}
   - component: {fileID: 317427963}
+  - component: {fileID: 317427964}
   m_Layer: 0
   m_Name: water (5)
   m_TagString: awita
@@ -871,6 +935,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.04
+--- !u!95 &317427964
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317427960}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 826c842d19817b843883bc02cf789a99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &331450154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,7 +1258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &524149724
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2236,6 +2320,7 @@ GameObject:
   - component: {fileID: 941678849}
   - component: {fileID: 941678850}
   - component: {fileID: 941678851}
+  - component: {fileID: 941678852}
   m_Layer: 0
   m_Name: water (4)
   m_TagString: awita
@@ -2326,6 +2411,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.04
+--- !u!95 &941678852
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941678848}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 826c842d19817b843883bc02cf789a99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &976471962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2610,6 +2715,7 @@ GameObject:
   - component: {fileID: 1095499750}
   - component: {fileID: 1095499751}
   - component: {fileID: 1095499752}
+  - component: {fileID: 1095499753}
   m_Layer: 0
   m_Name: water (11)
   m_TagString: awita
@@ -2700,6 +2806,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.04
+--- !u!95 &1095499753
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095499749}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 826c842d19817b843883bc02cf789a99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1122664098
 GameObject:
   m_ObjectHideFlags: 0
@@ -2850,6 +2976,7 @@ GameObject:
   - component: {fileID: 1197977171}
   - component: {fileID: 1197977170}
   - component: {fileID: 1197977172}
+  - component: {fileID: 1197977173}
   m_Layer: 0
   m_Name: water (12)
   m_TagString: awita
@@ -2940,6 +3067,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.04
+--- !u!95 &1197977173
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197977169}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 826c842d19817b843883bc02cf789a99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1198125467
 GameObject:
   m_ObjectHideFlags: 0
@@ -3697,6 +3844,7 @@ GameObject:
   - component: {fileID: 1595571128}
   - component: {fileID: 1595571129}
   - component: {fileID: 1595571130}
+  - component: {fileID: 1595571131}
   m_Layer: 0
   m_Name: water (3)
   m_TagString: awita
@@ -3787,6 +3935,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.04
+--- !u!95 &1595571131
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595571127}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 826c842d19817b843883bc02cf789a99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1600730739
 GameObject:
   m_ObjectHideFlags: 0
@@ -3899,7 +4067,7 @@ Animator:
   m_GameObject: {fileID: 1600730739}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5c857572328770f4fa1a5aba128283d5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 826c842d19817b843883bc02cf789a99, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4485,6 +4653,7 @@ GameObject:
   - component: {fileID: 2018701601}
   - component: {fileID: 2018701602}
   - component: {fileID: 2018701603}
+  - component: {fileID: 2018701604}
   m_Layer: 0
   m_Name: water (9)
   m_TagString: awita
@@ -4575,6 +4744,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.04
+--- !u!95 &2018701604
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018701600}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 826c842d19817b843883bc02cf789a99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2032809205
 GameObject:
   m_ObjectHideFlags: 0
@@ -4721,6 +4910,7 @@ GameObject:
   - component: {fileID: 2103424387}
   - component: {fileID: 2103424388}
   - component: {fileID: 2103424389}
+  - component: {fileID: 2103424390}
   m_Layer: 0
   m_Name: water (6)
   m_TagString: awita
@@ -4811,3 +5001,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.04
+--- !u!95 &2103424390
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103424386}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 826c842d19817b843883bc02cf789a99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
