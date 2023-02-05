@@ -21,13 +21,13 @@ public class rootRight : MonoBehaviour
 
     private void OnMouseDown()
     {
-        rootParent rootPaternScript = GetComponentInParent<rootParent>();
-        if (rootPaternScript.rootLevel < 5)
+        pumpkingScript pumpkingPaternScript = GetComponentInParent<pumpkingScript>();
+        if (pumpkingPaternScript.rootLevel < 5)
         {
             Transform parent = GetComponentInParent<Transform>();
             GameObject root = Instantiate(roots[Random.Range(0, roots.Length)], new Vector3(rightEnd.position.x, rightEnd.position.y, rightEnd.position.z), Quaternion.identity, parent);
             leftSide.SetActive(false);
-            rootPaternScript.rootLevel += 1;
+            pumpkingPaternScript.rootLevel += 1;
             Destroy(this);
         }
     }

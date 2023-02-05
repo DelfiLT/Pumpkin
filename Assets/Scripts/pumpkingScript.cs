@@ -9,6 +9,8 @@ public class pumpkingScript : MonoBehaviour
     public Sprite[] pumpkingSprites;
     SpriteRenderer actualSprite;
 
+    public int rootLevel;
+
     public GameObject firstRoot;
 
     // Start is called before the first frame update
@@ -33,7 +35,7 @@ public class pumpkingScript : MonoBehaviour
         }
         else if (pumpkingState == 2)
         {
-            Instantiate(firstRoot, transform);
+            Instantiate(firstRoot, new Vector3(transform.position.x, transform.position.y, transform.position.z + 2), Quaternion.identity, transform);
         }
     }
 }

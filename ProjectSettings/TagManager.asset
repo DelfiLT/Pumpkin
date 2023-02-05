@@ -8,6 +8,7 @@ TagManager:
   - rightSide
   - rootMain
   - awita
+  - Material
   layers:
   - Default
   - TransparentFX

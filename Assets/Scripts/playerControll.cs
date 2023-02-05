@@ -148,6 +148,8 @@ public class playerControll : MonoBehaviour
             gameManager.Instance.waterCant++;
         }
 
+        Debug.Log("Trigger");
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
