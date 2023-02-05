@@ -9,6 +9,7 @@ TagManager:
   - rootMain
   - awita
   - Material
+  - rootSecond
   layers:
   - Default
   - TransparentFX

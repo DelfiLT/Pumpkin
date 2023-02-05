@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 2598991029781895665}
   m_Layer: 0
   m_Name: rama3
-  m_TagString: Untagged
+  m_TagString: rootSecond
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
