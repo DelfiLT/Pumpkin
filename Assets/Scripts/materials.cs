@@ -20,7 +20,6 @@ public class materials : MonoBehaviour
     void Start()
     {
         materialRender.sprite = materialsSprite[materialType];
-        materialRender.color = new Color(255, 255, 255, 255);
     }
 
     // Update is called once per frame
@@ -28,5 +27,14 @@ public class materials : MonoBehaviour
     {
         
  
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("rootMain") || collision.CompareTag("rootSecond"))
+        {
+            materialRender.color = new Color(255, 255, 255, 255);
+            Debug.Log(collision.name);
+        }
     }
 }
