@@ -28,6 +28,7 @@ public class playerControll : MonoBehaviour
     public int seedCant = 3;
 
     Animator animator;
+    AudioSource[] audioSource;
 
     void Start()
     {
@@ -35,6 +36,8 @@ public class playerControll : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         camera1.SetActive(true);
         camera2.SetActive(false);
+        audioSource = GetComponents<AudioSource>();
+
     }
 
 
@@ -88,13 +91,19 @@ public class playerControll : MonoBehaviour
             spriteRenderer.flipX = false;
             animator.SetBool("moveRight", true);
             animator.SetBool("moveLeft", false);
-        
+            audioSource[0].Play();
+
+
         } else if ( (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
         {
             spriteRenderer.flipX = true;
             animator.SetBool("moveLeft", true);
-            animator.SetBool("moveRight", false);    
-        }else{
+            animator.SetBool("moveRight", false);
+            audioSource[0].Play();
+        }
+        else{
+            audioSource[1].Stop();
+            //audioSource[1].Play();
             animator.SetBool("moveRight", false);
             animator.SetBool("moveLeft", false);
         }
