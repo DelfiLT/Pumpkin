@@ -69,6 +69,7 @@ public class pumpkingScript : MonoBehaviour
                 gameManager.Instance.ironCant++;
                 gameManager.Instance.semillita.text = $"{gameManager.Instance.seedsCant}";
                 actualSprite.sprite = pumpkingSprites[materialType + 3];
+                gameManager.Instance.iron.color = new Color(255, 255, 255, 255);
                 break;
 
             case 2:
@@ -76,6 +77,7 @@ public class pumpkingScript : MonoBehaviour
                 gameManager.Instance.oilCant++;
                 gameManager.Instance.semillita.text = $"{gameManager.Instance.seedsCant}";
                 actualSprite.sprite = pumpkingSprites[materialType + 3];
+                gameManager.Instance.oil.color = new Color(255, 255, 255, 255);
                 break;
 
             case 3:
@@ -83,6 +85,7 @@ public class pumpkingScript : MonoBehaviour
                 gameManager.Instance.sandCant++;
                 gameManager.Instance.semillita.text = $"{gameManager.Instance.seedsCant}";
                 actualSprite.sprite = pumpkingSprites[materialType + 3];
+                gameManager.Instance.sand.color = new Color(255, 255, 255, 255);
                 break;
 
             case 4:

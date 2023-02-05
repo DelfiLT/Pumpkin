@@ -17,6 +17,9 @@ public class gameManager : MonoBehaviour
     public int waterSpawnCant = 6;
     public TextMeshProUGUI awa;
     public TextMeshProUGUI semillita;
+    public Image iron;
+    public Image oil;
+    public Image sand;
 
     
     private static gameManager _instance;
