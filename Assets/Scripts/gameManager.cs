@@ -45,7 +45,7 @@ public class gameManager : MonoBehaviour
     public void spawnAwita()
     {
         int indexWater = Random.Range(0, awita.Length);
-        if (!awita[indexWater].active && waterSpawnCant >= 0)
+        if (!awita[indexWater].activeSelf && waterSpawnCant >= 0)
         {
             awita[indexWater].SetActive(true);
             waterSpawnCant--;

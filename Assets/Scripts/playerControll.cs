@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class playerControll : MonoBehaviour
 {
-
+    //test merge otro
     public float velocityMovement;
+    public float testeameesta;
 
     public GameObject rootPatern;
     public GameObject world;
@@ -19,6 +20,10 @@ public class playerControll : MonoBehaviour
     public bool onTriggerRight = false;
     public bool placeRoot = false;
 
+
+    public SpriteRenderer spriteRenderer;
+
+
     public int[] seeds;
     public int seedCant = 3;
 
@@ -27,6 +32,7 @@ public class playerControll : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         camera1.SetActive(true);
         camera2.SetActive(false);
     }
@@ -40,12 +46,10 @@ public class playerControll : MonoBehaviour
 
         if (movementX > 0 && !onTriggerRight)
         {
-            animator.SetBool("moveRight", true);
             transform.Translate(movementX, 0, 0);
         }
         else if (movementX < 0 && !onTriggerLeft)
         {
-            animator.SetBool("moveRight", true);
             transform.Translate(movementX, 0, 0);
         }
 
@@ -69,8 +73,24 @@ public class playerControll : MonoBehaviour
         {
             //anim regar
             temporalPumpking.GetComponent<pumpkingScript>().changeState();
-            
         }
+
+        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) )
+        {
+            spriteRenderer.flipX = false;
+            animator.SetBool("moveRight", true);
+            animator.SetBool("moveLeft", false);
+        
+        } else if ( (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
+        {
+            spriteRenderer.flipX = true;
+            animator.SetBool("moveLeft", true);
+            animator.SetBool("moveRight", false);    
+        }else{
+            animator.SetBool("moveRight", false);
+            animator.SetBool("moveLeft", false);
+        }
+
 
         //if (Input.GetKeyDown(KeyCode.E) && !placeRoot && gameManager.Instance.seedsCant > 0 && gameManager.Instance.seedsCant <3)
         //{
@@ -131,11 +151,26 @@ public class playerControll : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        onTriggerRight = false;
-        onTriggerLeft = false;
-        placeRoot = false;
-        transform.localEulerAngles = new Vector3(0, 0, 0);
+        if (collision.CompareTag("rightSide") || collision.CompareTag("leftSide"))
+        {
+            onTriggerRight = false;
+            onTriggerLeft = false;
+            transform.localEulerAngles = new Vector3(0, 0, 0);
+        }
+        if (collision.CompareTag("rootMain"))
+        {
+            placeRoot = false;
+        }
     }
+
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("rootMain"))
+    //    {
+    //        placeRoot = true;
+
+    //    }
+    //}
 
     private void OnMouseDown()
     {

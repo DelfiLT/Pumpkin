@@ -9,11 +9,12 @@ public class pumpkingScript : MonoBehaviour
     public Sprite[] pumpkingSprites;
     SpriteRenderer actualSprite;
 
-
+    public GameObject firstRoot;
 
     // Start is called before the first frame update
     void Start()
     {
+        pumpkingState = 0;
         actualSprite = GetComponent<SpriteRenderer>();
     }
 
@@ -24,11 +25,15 @@ public class pumpkingScript : MonoBehaviour
     }
     public void changeState()
     {
-        if(pumpkingState < 3)
+        if(pumpkingState < 2)
         {
             pumpkingState++;
             actualSprite.sprite = pumpkingSprites[pumpkingState];
             gameManager.Instance.waterCant--;
+        }
+        else if (pumpkingState == 2)
+        {
+            Instantiate(firstRoot, transform);
         }
     }
 }
