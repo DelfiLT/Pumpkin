@@ -20,6 +20,10 @@ public class playerControll : MonoBehaviour
     public bool onTriggerRight = false;
     public bool placeRoot = false;
 
+
+    public SpriteRenderer spriteRenderer;
+
+
     public int[] seeds;
     public int seedCant = 3;
 
@@ -28,6 +32,7 @@ public class playerControll : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         camera1.SetActive(true);
         camera2.SetActive(false);
     }
@@ -70,17 +75,19 @@ public class playerControll : MonoBehaviour
             temporalPumpking.GetComponent<pumpkingScript>().changeState();
         }
 
-         if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) )
+        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) )
         {
-               animator.SetBool("moveRight", true);
+            spriteRenderer.flipX = false;
+            animator.SetBool("moveRight", true);
             animator.SetBool("moveLeft", false);
         
         } else if ( (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
         {
-             animator.SetBool("moveLeft", true);
+            spriteRenderer.flipX = true;
+            animator.SetBool("moveLeft", true);
             animator.SetBool("moveRight", false);    
         }else{
-          animator.SetBool("moveRight", false);
+            animator.SetBool("moveRight", false);
             animator.SetBool("moveLeft", false);
         }
 
