@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
@@ -51,12 +52,14 @@ public class gameManager : MonoBehaviour
         if (seedsCant == 0 && pumpkingCant == 0)
         {
             Debug.Log("LOSE");
+            SceneManager.LoadScene("Loose");
             //LOSE
         }
 
         if (ironCant > 0 && oilCant > 0 && sandCant > 0)
         {
             Debug.Log("WIN");
+            SceneManager.LoadScene("Win");
             //WIN
         }
     }
