@@ -6,8 +6,20 @@ public class pumpkingScript : MonoBehaviour
 {
     public int pumpkingState;
     public int pumpkingCount;
-    public Sprite[] pumpkingSprites;
     SpriteRenderer actualSprite;
+
+    public Sprite[] pumpkingSprites;
+    // Seed = 0
+    // Initial Pump = 1
+    // Pumpking = 2
+
+    // Fosil = 3
+    // Iron Pump = 4
+    // Oil Pump = 5
+    // Sand Pump = 6
+    // Lose = 7
+
+
 
     public int rootLevel;
 
@@ -23,7 +35,10 @@ public class pumpkingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (rootLevel > 5)
+        {
+            gameManager.Instance.pumpkingCant--;
+        }
     }
     public void changeState()
     {
@@ -37,6 +52,43 @@ public class pumpkingScript : MonoBehaviour
         else if (pumpkingState == 2)
         {
             Instantiate(firstRoot, new Vector3(transform.position.x, transform.position.y, transform.position.z + 2), Quaternion.identity, transform);
+        }
+    }
+
+    public void ChangeType(int materialType)
+    {
+        gameManager.Instance.pumpkingCant--;
+        switch (materialType)
+        {
+            case 0:
+                actualSprite.sprite = pumpkingSprites[materialType + 3];
+                break;
+
+            case 1:
+                gameManager.Instance.seedsCant++;
+                gameManager.Instance.ironCant++;
+                gameManager.Instance.semillita.text = $"{gameManager.Instance.seedsCant}";
+                actualSprite.sprite = pumpkingSprites[materialType + 3];
+                break;
+
+            case 2:
+                gameManager.Instance.seedsCant++;
+                gameManager.Instance.oilCant++;
+                gameManager.Instance.semillita.text = $"{gameManager.Instance.seedsCant}";
+                actualSprite.sprite = pumpkingSprites[materialType + 3];
+                break;
+
+            case 3:
+                gameManager.Instance.seedsCant++;
+                gameManager.Instance.sandCant++;
+                gameManager.Instance.semillita.text = $"{gameManager.Instance.seedsCant}";
+                actualSprite.sprite = pumpkingSprites[materialType + 3];
+                break;
+
+            case 4:
+                actualSprite.sprite = pumpkingSprites[materialType + 3];
+                break;
+
         }
     }
 }
