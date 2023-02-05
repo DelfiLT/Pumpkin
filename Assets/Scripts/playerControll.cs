@@ -41,12 +41,10 @@ public class playerControll : MonoBehaviour
 
         if (movementX > 0 && !onTriggerRight)
         {
-            animator.SetBool("moveRight", true);
             transform.Translate(movementX, 0, 0);
         }
         else if (movementX < 0 && !onTriggerLeft)
         {
-            animator.SetBool("moveRight", true);
             transform.Translate(movementX, 0, 0);
         }
 
@@ -70,8 +68,22 @@ public class playerControll : MonoBehaviour
         {
             //anim regar
             temporalPumpking.GetComponent<pumpkingScript>().changeState();
-            
         }
+
+         if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) )
+        {
+               animator.SetBool("moveRight", true);
+            animator.SetBool("moveLeft", false);
+        
+        } else if ( (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
+        {
+             animator.SetBool("moveLeft", true);
+            animator.SetBool("moveRight", false);    
+        }else{
+          animator.SetBool("moveRight", false);
+            animator.SetBool("moveLeft", false);
+        }
+
 
         //if (Input.GetKeyDown(KeyCode.E) && !placeRoot && gameManager.Instance.seedsCant > 0 && gameManager.Instance.seedsCant <3)
         //{
