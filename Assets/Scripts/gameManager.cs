@@ -8,6 +8,7 @@ public class gameManager : MonoBehaviour
 {
     public int seedsCant;
     public int waterCant;
+    public int pumpkingCant;
     public GameObject[] awita;
     public int waterSpawnCant = 6;
     public TextMeshProUGUI awa;
@@ -37,6 +38,7 @@ public class gameManager : MonoBehaviour
 
     void Start()
     {
+        pumpkingCant = 0;
         seedsCant = 3;
         waterCant = 0;
         semillita.text = $"{seedsCant}";
