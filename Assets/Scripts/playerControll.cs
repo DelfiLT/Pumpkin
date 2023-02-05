@@ -12,6 +12,7 @@ public class playerControll : MonoBehaviour
     public GameObject[] roots;
     public GameObject camera1;
     public GameObject camera2;
+    public GameObject pumpking;
 
     public bool onTriggerLeft = false;
     public bool onTriggerRight = false;
@@ -29,40 +30,57 @@ public class playerControll : MonoBehaviour
         camera2.SetActive(false);
     }
 
- 
-    void Update() 
+
+    void Update()
     {
         float movementX = Input.GetAxis("Horizontal") * velocityMovement;
 
         movementX *= Time.deltaTime;
 
-        if(movementX > 0 && !onTriggerRight)
+        if (movementX > 0 && !onTriggerRight)
         {
             animator.SetBool("moveRight", true);
             transform.Translate(movementX, 0, 0);
         }
-        else if(movementX < 0 && !onTriggerLeft)
+        else if (movementX < 0 && !onTriggerLeft)
         {
             animator.SetBool("moveRight", true);
             transform.Translate(movementX, 0, 0);
         }
-        
+
         if (onTriggerRight && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
         {
             world.transform.Rotate(new Vector3(0, 0, 0.1f));
         }
-        
-        if(onTriggerLeft && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
+
+        if (onTriggerLeft && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
         {
             world.transform.Rotate(new Vector3(0, 0, -0.1f));
         }
 
-
-        if (Input.GetKeyDown(KeyCode.E) && !placeRoot)
+        if (Input.GetKeyDown(KeyCode.E) && !placeRoot && gameManager.Instance.seedsCant > 0)
         {
-            GameObject rootFather = Instantiate(rootPatern, new Vector3(transform.position.x, transform.position.y -0.35f , transform.position.z - 3), Quaternion.identity, world.transform);
-            Instantiate(roots[0], new Vector3(rootFather.transform.position.x, rootFather.transform.position.y, rootFather.transform.position.z), Quaternion.identity, rootFather.transform);
+            Instantiate(pumpking, new Vector3(transform.position.x, transform.position.y -0.3f, transform.position.z), Quaternion.identity, world.transform);
+            gameManager.Instance.seedsCant--;
         }
+
+        //if (Input.GetKeyDown(KeyCode.E) && !placeRoot && gameManager.Instance.seedsCant > 0 && gameManager.Instance.seedsCant <3)
+        //{
+        //    Instantiate(seed, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity, world.transform);
+        //    gameManager.Instance.seedsCant--;
+        //    gameManager.Instance.pumpkingState[0];
+        //    gameManager.Instance.pumpkingCount++;
+
+            //    if(Input.GetKeyDown(KeyCode.E) && gameManager.Instance.waterCant > 0) 
+            //    {
+            //        gameManager.Instance.pumpkingState[]
+            //    }
+
+            //if(Input.GetKeyDown.R) && (gameManager.Instance.pumpkingState[2])
+            //{
+            //    GameObject rootFather = Instantiate(rootPatern, new Vector3(transform.position.x, transform.position.y - 0.35f, transform.position.z - 3), Quaternion.identity, world.transform);
+            //    Instantiate(roots[0], new Vector3(rootFather.transform.position.x, rootFather.transform.position.y, rootFather.transform.position.z), Quaternion.identity, rootFather.transform);
+            //}
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
