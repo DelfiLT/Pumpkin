@@ -77,7 +77,7 @@ public class playerControll : MonoBehaviour
 
         if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) )
         {
-            spriteRenderer.flipX = false;git push
+            spriteRenderer.flipX = false;
             animator.SetBool("moveRight", true);
             animator.SetBool("moveLeft", false);
         
