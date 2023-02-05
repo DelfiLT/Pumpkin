@@ -30,6 +30,7 @@ public class pumpkingScript : MonoBehaviour
             pumpkingState++;
             actualSprite.sprite = pumpkingSprites[pumpkingState];
             gameManager.Instance.waterCant--;
+            gameManager.Instance.awa.text = $"{gameManager.Instance.waterCant}";
         }
         else if (pumpkingState == 2)
         {

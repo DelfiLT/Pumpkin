@@ -67,6 +67,7 @@ public class playerControll : MonoBehaviour
         {
             Instantiate(pumpking, new Vector3(transform.position.x, transform.position.y -0.3f, transform.position.z), Quaternion.identity, world.transform);
             gameManager.Instance.seedsCant--;
+            gameManager.Instance.semillita.text = $"{gameManager.Instance.seedsCant}";
         }
 
         if (Input.GetKeyDown(KeyCode.Q) && placeRoot && gameManager.Instance.waterCant > 0)
@@ -128,12 +129,12 @@ public class playerControll : MonoBehaviour
         if (collision.CompareTag("leftSide"))
         {
             onTriggerLeft = true;
-            transform.localEulerAngles = new Vector3(0, 0, 15);
+            transform.localEulerAngles = new Vector3(0, 0, 9);
         }
         if (collision.CompareTag("rightSide"))
         {
             onTriggerRight = true;
-            transform.localEulerAngles = new Vector3(0, 0, -15);
+            transform.localEulerAngles = new Vector3(0, 0, -9);
         }
         if (collision.CompareTag("rootMain"))
         {
@@ -146,6 +147,7 @@ public class playerControll : MonoBehaviour
             collision.gameObject.SetActive(false);
             gameManager.Instance.waterSpawnCant++;
             gameManager.Instance.waterCant++;
+            gameManager.Instance.awa.text = $"{gameManager.Instance.waterCant}";
         }
 
     }

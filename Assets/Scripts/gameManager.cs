@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class gameManager : MonoBehaviour
 {
@@ -8,6 +10,9 @@ public class gameManager : MonoBehaviour
     public int waterCant;
     public GameObject[] awita;
     public int waterSpawnCant = 6;
+    public TextMeshProUGUI awa;
+    public TextMeshProUGUI semillita;
+
     
 
 
@@ -34,6 +39,8 @@ public class gameManager : MonoBehaviour
     {
         seedsCant = 3;
         waterCant = 0;
+        semillita.text = $"{seedsCant}";
+        awa.text = $"{waterCant}";
         InvokeRepeating("spawnAwita", 10, Random.Range(1, 10));
     }
 
