@@ -18,9 +18,4 @@ public class materials : MonoBehaviour
         
  
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("material");
-    }
 }

@@ -151,11 +151,26 @@ public class playerControll : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        onTriggerRight = false;
-        onTriggerLeft = false;
-        placeRoot = false;
-        transform.localEulerAngles = new Vector3(0, 0, 0);
+        if (collision.CompareTag("rightSide") || collision.CompareTag("leftSide"))
+        {
+            onTriggerRight = false;
+            onTriggerLeft = false;
+            transform.localEulerAngles = new Vector3(0, 0, 0);
+        }
+        if (collision.CompareTag("rootMain"))
+        {
+            placeRoot = false;
+        }
     }
+
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("rootMain"))
+    //    {
+    //        placeRoot = true;
+
+    //    }
+    //}
 
     private void OnMouseDown()
     {
