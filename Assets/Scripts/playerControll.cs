@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playerControll : MonoBehaviour
 {
-    //test merge+
+    //test merge otro
     public float velocityMovement;
     public float testeameesta;
 
@@ -77,7 +77,7 @@ public class playerControll : MonoBehaviour
 
         if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) )
         {
-            spriteRenderer.flipX = false;
+            spriteRenderer.flipX = false;git push
             animator.SetBool("moveRight", true);
             animator.SetBool("moveLeft", false);
         
