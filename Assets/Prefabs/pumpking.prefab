@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1359136933536792670}
   - component: {fileID: 6057752385122138340}
   - component: {fileID: -120108511271881855}
+  - component: {fileID: 1485196631295222670}
   m_Layer: 0
   m_Name: pumpking
   m_TagString: rootMain
@@ -111,3 +112,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25446284, y: 0.16037299}
   m_EdgeRadius: 0
+--- !u!114 &1485196631295222670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101120887514416144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2875b7ebb018574ca50083afc6f0692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pumpkingState: 0
+  pumpkingCount: 0
+  pumpkingSprites:
+  - {fileID: -1111049882, guid: 76b5cc574726d2f47be8a92cc331c006, type: 3}
+  - {fileID: -824709708, guid: 76b5cc574726d2f47be8a92cc331c006, type: 3}
+  - {fileID: 993792278, guid: 76b5cc574726d2f47be8a92cc331c006, type: 3}

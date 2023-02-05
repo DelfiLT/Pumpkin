@@ -13,6 +13,7 @@ public class playerControll : MonoBehaviour
     public GameObject camera1;
     public GameObject camera2;
     public GameObject pumpking;
+    public GameObject temporalPumpking;
 
     public bool onTriggerLeft = false;
     public bool onTriggerRight = false;
@@ -64,6 +65,13 @@ public class playerControll : MonoBehaviour
             gameManager.Instance.seedsCant--;
         }
 
+        if (Input.GetKeyDown(KeyCode.Q) && placeRoot && gameManager.Instance.waterCant > 0)
+        {
+            //anim regar
+            temporalPumpking.GetComponent<pumpkingScript>().changeState();
+            
+        }
+
         //if (Input.GetKeyDown(KeyCode.E) && !placeRoot && gameManager.Instance.seedsCant > 0 && gameManager.Instance.seedsCant <3)
         //{
         //    Instantiate(seed, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity, world.transform);
@@ -109,7 +117,15 @@ public class playerControll : MonoBehaviour
         }
         if (collision.CompareTag("rootMain"))
         {
+            temporalPumpking = collision.gameObject;
             placeRoot = true;
+
+        }
+        if (collision.CompareTag("awita"))
+        {
+            collision.gameObject.SetActive(false);
+            gameManager.Instance.waterSpawnCant++;
+            gameManager.Instance.waterCant++;
         }
 
     }
