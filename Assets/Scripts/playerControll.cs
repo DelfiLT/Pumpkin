@@ -67,13 +67,18 @@ public class playerControll : MonoBehaviour
         {
             Instantiate(pumpking, new Vector3(transform.position.x, transform.position.y -0.3f, transform.position.z), Quaternion.identity, world.transform);
             gameManager.Instance.seedsCant--;
+            gameManager.Instance.pumpkingCant++;
             gameManager.Instance.semillita.text = $"{gameManager.Instance.seedsCant}";
         }
 
         if (Input.GetKeyDown(KeyCode.Q) && placeRoot && gameManager.Instance.waterCant > 0)
         {
             //anim regar
-            temporalPumpking.GetComponent<pumpkingScript>().changeState();
+            pumpkingScript thispumpkingScript = temporalPumpking.GetComponent<pumpkingScript>();
+            if (thispumpkingScript != null)
+            {
+                thispumpkingScript.changeState();
+            }
         }
 
         if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) )
