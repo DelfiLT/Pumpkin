@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerControll : MonoBehaviour
 {
@@ -15,11 +16,13 @@ public class playerControll : MonoBehaviour
     public GameObject camera2;
     public GameObject pumpking;
     public GameObject temporalPumpking;
+    public GameObject canvas;
 
     public bool onTriggerLeft = false;
     public bool onTriggerRight = false;
     public bool placeRoot = false;
 
+    public Animator naveanim;
 
     public SpriteRenderer spriteRenderer;
 
@@ -165,6 +168,21 @@ public class playerControll : MonoBehaviour
             gameManager.Instance.waterCant++;
             gameManager.Instance.awa.text = $"{gameManager.Instance.waterCant}";
         }
+        if(collision.CompareTag("nave") && gameManager.Instance.win)
+        {
+            canvas.SetActive(false);
+            velocityMovement = 0;
+            gameManager.Instance.seedsCant = 0;
+            gameManager.Instance.pumpkingCant = 1;
+            Debug.Log("animNave");
+            Invoke("gotowin", 5);
+            naveanim.SetTrigger("fin");
+        }
+    }
+
+    void gotowin()
+    {
+        SceneManager.LoadScene("Win");
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

@@ -21,6 +21,9 @@ public class gameManager : MonoBehaviour
     public Image oil;
     public Image sand;
 
+    public GameObject readyDilog;
+    public bool win = false;
+
     
     private static gameManager _instance;
     public static gameManager Instance
@@ -42,6 +45,7 @@ public class gameManager : MonoBehaviour
 
     void Start()
     {
+        win = false;
         pumpkingCant = 0;
         seedsCant = 3;
         waterCant = 0;
@@ -62,7 +66,9 @@ public class gameManager : MonoBehaviour
         if (ironCant > 0 && oilCant > 0 && sandCant > 0)
         {
             Debug.Log("WIN");
-            SceneManager.LoadScene("Win");
+            readyDilog.SetActive(true);
+            win = true;
+            //SceneManager.LoadScene("Win");
             //WIN
         }
     }
