@@ -56,7 +56,7 @@ public class gameManager : MonoBehaviour
 
     void Update()
     {
-        if (seedsCant == 0 && pumpkingCant == 0)
+        if (seedsCant == 0 && pumpkingCant <= 0)
         {
             Debug.Log("LOSE");
             SceneManager.LoadScene("Loose");

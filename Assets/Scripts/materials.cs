@@ -36,6 +36,7 @@ public class materials : MonoBehaviour
             materialRender.color = new Color(255, 255, 255, 255);
             pumpkingScript actualpumpkingScript = collision.gameObject.GetComponentInParent<pumpkingScript>();
             actualpumpkingScript.ChangeType(materialType);
+            //Destroy(this);
         }
     }
 }

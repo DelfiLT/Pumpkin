@@ -61,12 +61,12 @@ public class playerControll : MonoBehaviour
 
         if (onTriggerRight && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
         {
-            world.transform.Rotate(new Vector3(0, 0, 0.1f));
+            world.transform.Rotate(new Vector3(0, 0, 0.25f));
         }
 
         if (onTriggerLeft && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
         {
-            world.transform.Rotate(new Vector3(0, 0, -0.1f));
+            world.transform.Rotate(new Vector3(0, 0, -0.25f));
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -175,7 +175,7 @@ public class playerControll : MonoBehaviour
             gameManager.Instance.seedsCant = 0;
             gameManager.Instance.pumpkingCant = 1;
             Debug.Log("animNave");
-            Invoke("gotowin", 5);
+            Invoke("gotowin", 3);
             naveanim.SetTrigger("fin");
         }
     }
