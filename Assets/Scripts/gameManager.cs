@@ -78,6 +78,7 @@ public class gameManager : MonoBehaviour
         int indexWater = Random.Range(0, awita.Length);
         if (!awita[indexWater].activeSelf && waterSpawnCant >= 0)
         {
+            fx_waterDropAppears.playFX();
             awita[indexWater].SetActive(true);
             waterSpawnCant--;
         }

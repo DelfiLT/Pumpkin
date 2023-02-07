@@ -7,7 +7,6 @@ public class playerControll : MonoBehaviour
 {
     //test merge otro
     public float velocityMovement;
-    public float testeameesta;
 
     public GameObject rootPatern;
     public GameObject world;
@@ -77,12 +76,14 @@ public class playerControll : MonoBehaviour
                 pumpkingScript thispumpkingScript = temporalPumpking.GetComponent<pumpkingScript>();
                 if (thispumpkingScript != null)
                 {
+                    fx_dropWater.playFX();
                     thispumpkingScript.changeState();
                 }
             }
             else if (!placeRoot && gameManager.Instance.seedsCant > 0)
-            {
+            {   
                 Instantiate(pumpking, new Vector3(transform.position.x, transform.position.y - 0.3f, transform.position.z), Quaternion.identity, world.transform);
+                
                 gameManager.Instance.seedsCant--;
                 gameManager.Instance.pumpkingCant++;
                 gameManager.Instance.semillita.text = $"{gameManager.Instance.seedsCant}";
@@ -157,12 +158,15 @@ public class playerControll : MonoBehaviour
         }
         if (collision.CompareTag("rootMain"))
         {
+            
             temporalPumpking = collision.gameObject;
             placeRoot = true;
 
         }
         if (collision.CompareTag("awita"))
-        {
+        {   
+            
+            pickwater_fx.playFX();
             collision.gameObject.SetActive(false);
             gameManager.Instance.waterSpawnCant++;
             gameManager.Instance.waterCant++;

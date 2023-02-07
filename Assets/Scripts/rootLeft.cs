@@ -25,6 +25,7 @@ public class rootLeft : MonoBehaviour
         pumpkingScript pumpkingPaternScript = GetComponentInParent<pumpkingScript>();
         if(pumpkingPaternScript.rootLevel < 5)
         {
+            fx_createBranch.playFX();
             Transform parent = GetComponentInParent<Transform>();
             GameObject root = Instantiate(roots[Random.Range(0, roots.Length)], new Vector3(leftEnd.position.x, leftEnd.position.y, leftEnd.position.z), Quaternion.identity, parent);
             rightSide.SetActive(false);
