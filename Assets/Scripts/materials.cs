@@ -33,6 +33,7 @@ public class materials : MonoBehaviour
     {
         if (collision.CompareTag("rootMain") || collision.CompareTag("rootSecond"))
         {
+            fx_getElement.playFX();
             materialRender.color = new Color(255, 255, 255, 255);
             pumpkingScript actualpumpkingScript = collision.gameObject.GetComponentInParent<pumpkingScript>();
             actualpumpkingScript.ChangeType(materialType);
