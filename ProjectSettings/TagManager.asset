@@ -11,6 +11,8 @@ TagManager:
   - Material
   - rootSecond
   - nave
+  - audioAwita
+  - Fx
   layers:
   - Default
   - TransparentFX
