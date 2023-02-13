@@ -165,7 +165,7 @@ public class playerControll : MonoBehaviour
         }
         if (collision.CompareTag("awita"))
         {   
-            
+            Debug.Log("Opa la la");
             pickwater_fx.playFX();
             collision.gameObject.SetActive(false);
             gameManager.Instance.waterSpawnCant++;
