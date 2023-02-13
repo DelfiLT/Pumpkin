@@ -173,8 +173,7 @@ public class playerControll : MonoBehaviour
             gameManager.Instance.awa.text = $"{gameManager.Instance.waterCant}";
         }
         
-        //if(collision.CompareTag("nave") && gameManager.Instance.win)
-        if(collision.CompareTag("nave"))
+        if(collision.CompareTag("nave") && gameManager.Instance.win)
         {
             canvas.SetActive(false);
             velocityMovement = 0;
